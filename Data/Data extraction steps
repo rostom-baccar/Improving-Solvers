@@ -1,0 +1,18 @@
+- some fzn
+- 2017 probs
+	- cargo
+	- city-position
+	- community-detection
+	- crosswords 
+	- gbac (no solutions for all files)
+	- groupsplitter
+	- hrc
+	- jp-encoding
+	- ma-path-finding
+	
+cd data/mznc2017_probs/ma-path-finding
+minizinc -c jp-encoding.mzn [].dzn	
+cd ..	
+cd ..
+cd ..	
+./mistral-fz -t 3 --nb_configurations 5 data/mznc2017_probs/ma-path-finding/jp-encoding.fzn

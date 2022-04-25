@@ -33,7 +33,8 @@ for folder in *; do
 	done
 
 #Moving all fzn files to the same folder
-	mv *.fzn /home/rostom/Desktop/Projects/Mistral-PIR/fz/data/generated-fzn
+	mv *.fzn /home/rostom/Desktop/Projects/PIR---Improving-Solvers/Data-Extraction/generated-fzn
+	
 	cd ..
     fi
 done

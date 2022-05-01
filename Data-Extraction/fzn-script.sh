@@ -16,7 +16,8 @@ for folder in *; do
 
 #Identifying mzn file
 	for f in *; do 
-		if [ "$f" == *".mzn" ]; then mznFile=$f;
+		ext=${f: -4};
+		if [ "$ext" == ".mzn" ]; then mznFile=$f;
 	fi
 	done
 
@@ -33,14 +34,9 @@ for folder in *; do
 	done
 
 #Moving all fzn files to the same folder
-	mv *.fzn /home/rostom/Desktop/Projects/PIR---Improving-Solvers/Data-Extraction/generated-fzn
+	mv *.fzn /home/rostom/Desktop/Projects/PIR---Improving-Solvers/Data-Extraction/2019
 	
 	cd ..
     fi
 done
 echo "fzn files generated successfully."
-
-
-
-
-

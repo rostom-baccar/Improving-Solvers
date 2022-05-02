@@ -1,5 +1,0 @@
-git clone https://github.com/siala/Mistral-PIR.git
-git clone https://github.com/rostom-baccar/Improving-Solvers.git
-cp /minizinc/Improving-Solvers/Data-Extraction/*.zip /minizinc/Mistral-PIR/fz
-cd Mistral-PIR/fz
-make

@@ -1,11 +1,25 @@
 #Creating output file
-rm raw-data-some-fzn
-touch raw-data-some-fzn
-cd Uncompressed-fzn-files-for-PIR/some-fzn
+rm some-fzn-data;
+touch some-fzn-data;
+cd Uncompressed-fzn-files-for-PIR/some-fzn;
+i=0;
+
+#Displaying number of instances in folder
+numfiles=$(ls -1 --file-type | grep -v '/$' | wc -l);
+
+#Looping over all fzn files & run the command
 for fzn in *; do
         cd ../..;
-        echo $(./mistral-fz -t 5 --nb_configurations 5 Uncompressed-fzn-files-for-PIR/some-fzn/$fzn)>
+        cat some-fzn-data;
+        echo "---------------------------------------------------";
+        echo $(./mistral-fz -t 1 --nb_configurations 1  Uncompressed-fzn-files-for-PIR/some-fzn/$fzn)>>some-fzn--data;
         cd Uncompressed-fzn-files-for-PIR/some-fzn;
+         i=$((i+1));
+        echo;
+        echo "---------------------------------------------------";
+        echo "Progress: (" $i" / "$numfiles" ) instances processed";
+        echo "Content of some-fzn-data :";
+
 done
 
 
